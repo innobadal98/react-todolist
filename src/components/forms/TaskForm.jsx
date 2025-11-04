@@ -7,7 +7,7 @@ function TaskForm({ task, onChange, onSubmit, editIndex }) {
       className="bg-white shadow-md rounded-xl p-6 max-w-md mx-auto mt-6 space-y-4 border border-gray-100"
     >
       <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">
-        {editIndex !== null ? "✏️ Edit Task" : "📝 Add New Task"}
+        {editIndex !== null ? " Edit Task" : " Add New Task"}
       </h2>
 
       {/* Task Name */}

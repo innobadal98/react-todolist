@@ -40,7 +40,7 @@ function TaskTable({ list, onEdit, onDelete, onToggle }) {
                   t.status ? "text-green-600" : "text-yellow-600"
                 }`}
               >
-                {t.status ? "✅ Done" : "⌛ Pending"}
+                {t.status ? " Done" : " Pending"}
               </td>
               <td className="px-4 py-3 flex items-center space-x-2">
                 <EditBtn onClick={() => onEdit(index)} />

@@ -12,7 +12,7 @@ function Home() {
   });
   const [editIndex, setEditIndex] = useState(null);
 
-  // 🧠 Load tasks from localStorage
+  //  Load tasks from localStorage
   useEffect(() => {
     try {
       const savedList = JSON.parse(localStorage.getItem(LIST_KEY));
@@ -22,12 +22,12 @@ function Home() {
     }
   }, []);
 
-  // 💾 Save tasks to localStorage
+  //  Save tasks to localStorage
   useEffect(() => {
     localStorage.setItem(LIST_KEY, JSON.stringify(list));
   }, [list]);
 
-  // ➕ Add or Update Task
+  //  Add or Update Task
   const handleFormData = (e) => {
     e.preventDefault();
     if (!task.taskName.trim()) return alert("Please enter a task name");
@@ -42,20 +42,20 @@ function Home() {
     setTask({ taskName: "", status: false, description: "" });
   };
 
-  // 🔁 Toggle Status
+  //  Toggle Status
   const handleStatus = (index) => {
     setList(
       list.map((t, i) => (i === index ? { ...t, status: !t.status } : t))
     );
   };
 
-  // ✏️ Edit Task
+  //  Edit Task
   const handleEdit = (index) => {
     setTask(list[index]);
     setEditIndex(index);
   };
 
-  // ❌ Delete Task
+  //  Delete Task
   const handleDelete = (index) => {
     setList(list.filter((_, i) => i !== index));
   };
